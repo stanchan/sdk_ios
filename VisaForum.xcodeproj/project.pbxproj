@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C39C0E0197DDE8E006BA176 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0DF197DDE8E006BA176 /* Foundation.framework */; };
+		5C39C0E2197DDE8E006BA176 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0E1197DDE8E006BA176 /* CoreGraphics.framework */; };
+		5C39C0E4197DDE8E006BA176 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0E3197DDE8E006BA176 /* UIKit.framework */; };
+		5C39C0EA197DDE8E006BA176 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C39C0E8197DDE8E006BA176 /* InfoPlist.strings */; };
+		5C39C0EC197DDE8E006BA176 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39C0EB197DDE8E006BA176 /* main.m */; };
+		5C39C0F0197DDE8E006BA176 /* HKVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39C0EF197DDE8E006BA176 /* HKVAppDelegate.m */; };
+		5C39C0F2197DDE8E006BA176 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C39C0F1197DDE8E006BA176 /* Images.xcassets */; };
+		5C39C0F9197DDE8E006BA176 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0F8197DDE8E006BA176 /* XCTest.framework */; };
+		5C39C0FA197DDE8E006BA176 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0DF197DDE8E006BA176 /* Foundation.framework */; };
+		5C39C0FB197DDE8E006BA176 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0E3197DDE8E006BA176 /* UIKit.framework */; };
+		5C39C103197DDE8E006BA176 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C39C101197DDE8E006BA176 /* InfoPlist.strings */; };
+		5C39C105197DDE8E006BA176 /* VisaForumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39C104197DDE8E006BA176 /* VisaForumTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C39C0FC197DDE8E006BA176 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C39C0D4197DDE8E006BA176 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C39C0DB197DDE8E006BA176;
+			remoteInfo = VisaForum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C39C0DC197DDE8E006BA176 /* VisaForum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisaForum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C39C0DF197DDE8E006BA176 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5C39C0E1197DDE8E006BA176 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5C39C0E3197DDE8E006BA176 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5C39C0E7197DDE8E006BA176 /* VisaForum-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisaForum-Info.plist"; sourceTree = "<group>"; };
+		5C39C0E9197DDE8E006BA176 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5C39C0EB197DDE8E006BA176 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C39C0ED197DDE8E006BA176 /* VisaForum-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VisaForum-Prefix.pch"; sourceTree = "<group>"; };
+		5C39C0EE197DDE8E006BA176 /* HKVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKVAppDelegate.h; sourceTree = "<group>"; };
+		5C39C0EF197DDE8E006BA176 /* HKVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKVAppDelegate.m; sourceTree = "<group>"; };
+		5C39C0F1197DDE8E006BA176 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5C39C0F7197DDE8E006BA176 /* VisaForumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisaForumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C39C0F8197DDE8E006BA176 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5C39C100197DDE8E006BA176 /* VisaForumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisaForumTests-Info.plist"; sourceTree = "<group>"; };
+		5C39C102197DDE8E006BA176 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5C39C104197DDE8E006BA176 /* VisaForumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisaForumTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C39C0D9197DDE8E006BA176 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C39C0E2197DDE8E006BA176 /* CoreGraphics.framework in Frameworks */,
+				5C39C0E4197DDE8E006BA176 /* UIKit.framework in Frameworks */,
+				5C39C0E0197DDE8E006BA176 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C39C0F4197DDE8E006BA176 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C39C0F9197DDE8E006BA176 /* XCTest.framework in Frameworks */,
+				5C39C0FB197DDE8E006BA176 /* UIKit.framework in Frameworks */,
+				5C39C0FA197DDE8E006BA176 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C39C0D3197DDE8E006BA176 = {
+			isa = PBXGroup;
+			children = (
+				5C39C0E5197DDE8E006BA176 /* VisaForum */,
+				5C39C0FE197DDE8E006BA176 /* VisaForumTests */,
+				5C39C0DE197DDE8E006BA176 /* Frameworks */,
+				5C39C0DD197DDE8E006BA176 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C39C0DD197DDE8E006BA176 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C39C0DC197DDE8E006BA176 /* VisaForum.app */,
+				5C39C0F7197DDE8E006BA176 /* VisaForumTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C39C0DE197DDE8E006BA176 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C39C0DF197DDE8E006BA176 /* Foundation.framework */,
+				5C39C0E1197DDE8E006BA176 /* CoreGraphics.framework */,
+				5C39C0E3197DDE8E006BA176 /* UIKit.framework */,
+				5C39C0F8197DDE8E006BA176 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C39C0E5197DDE8E006BA176 /* VisaForum */ = {
+			isa = PBXGroup;
+			children = (
+				5C39C0EE197DDE8E006BA176 /* HKVAppDelegate.h */,
+				5C39C0EF197DDE8E006BA176 /* HKVAppDelegate.m */,
+				5C39C0F1197DDE8E006BA176 /* Images.xcassets */,
+				5C39C0E6197DDE8E006BA176 /* Supporting Files */,
+			);
+			path = VisaForum;
+			sourceTree = "<group>";
+		};
+		5C39C0E6197DDE8E006BA176 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C39C0E7197DDE8E006BA176 /* VisaForum-Info.plist */,
+				5C39C0E8197DDE8E006BA176 /* InfoPlist.strings */,
+				5C39C0EB197DDE8E006BA176 /* main.m */,
+				5C39C0ED197DDE8E006BA176 /* VisaForum-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C39C0FE197DDE8E006BA176 /* VisaForumTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C39C104197DDE8E006BA176 /* VisaForumTests.m */,
+				5C39C0FF197DDE8E006BA176 /* Supporting Files */,
+			);
+			path = VisaForumTests;
+			sourceTree = "<group>";
+		};
+		5C39C0FF197DDE8E006BA176 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C39C100197DDE8E006BA176 /* VisaForumTests-Info.plist */,
+				5C39C101197DDE8E006BA176 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C39C0DB197DDE8E006BA176 /* VisaForum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C39C108197DDE8E006BA176 /* Build configuration list for PBXNativeTarget "VisaForum" */;
+			buildPhases = (
+				5C39C0D8197DDE8E006BA176 /* Sources */,
+				5C39C0D9197DDE8E006BA176 /* Frameworks */,
+				5C39C0DA197DDE8E006BA176 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VisaForum;
+			productName = VisaForum;
+			productReference = 5C39C0DC197DDE8E006BA176 /* VisaForum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C39C0F6197DDE8E006BA176 /* VisaForumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C39C10B197DDE8E006BA176 /* Build configuration list for PBXNativeTarget "VisaForumTests" */;
+			buildPhases = (
+				5C39C0F3197DDE8E006BA176 /* Sources */,
+				5C39C0F4197DDE8E006BA176 /* Frameworks */,
+				5C39C0F5197DDE8E006BA176 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C39C0FD197DDE8E006BA176 /* PBXTargetDependency */,
+			);
+			name = VisaForumTests;
+			productName = VisaForumTests;
+			productReference = 5C39C0F7197DDE8E006BA176 /* VisaForumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C39C0D4197DDE8E006BA176 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HKV;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = hridaykemburu;
+				TargetAttributes = {
+					5C39C0F6197DDE8E006BA176 = {
+						TestTargetID = 5C39C0DB197DDE8E006BA176;
+					};
+				};
+			};
+			buildConfigurationList = 5C39C0D7197DDE8E006BA176 /* Build configuration list for PBXProject "VisaForum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5C39C0D3197DDE8E006BA176;
+			productRefGroup = 5C39C0DD197DDE8E006BA176 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C39C0DB197DDE8E006BA176 /* VisaForum */,
+				5C39C0F6197DDE8E006BA176 /* VisaForumTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C39C0DA197DDE8E006BA176 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C39C0EA197DDE8E006BA176 /* InfoPlist.strings in Resources */,
+				5C39C0F2197DDE8E006BA176 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C39C0F5197DDE8E006BA176 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C39C103197DDE8E006BA176 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C39C0D8197DDE8E006BA176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C39C0F0197DDE8E006BA176 /* HKVAppDelegate.m in Sources */,
+				5C39C0EC197DDE8E006BA176 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C39C0F3197DDE8E006BA176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C39C105197DDE8E006BA176 /* VisaForumTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C39C0FD197DDE8E006BA176 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C39C0DB197DDE8E006BA176 /* VisaForum */;
+			targetProxy = 5C39C0FC197DDE8E006BA176 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C39C0E8197DDE8E006BA176 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C39C0E9197DDE8E006BA176 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5C39C101197DDE8E006BA176 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C39C102197DDE8E006BA176 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C39C106197DDE8E006BA176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5C39C107197DDE8E006BA176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C39C109197DDE8E006BA176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VisaForum/VisaForum-Prefix.pch";
+				INFOPLIST_FILE = "VisaForum/VisaForum-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5C39C10A197DDE8E006BA176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VisaForum/VisaForum-Prefix.pch";
+				INFOPLIST_FILE = "VisaForum/VisaForum-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5C39C10C197DDE8E006BA176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VisaForum.app/VisaForum";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VisaForum/VisaForum-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VisaForumTests/VisaForumTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5C39C10D197DDE8E006BA176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VisaForum.app/VisaForum";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VisaForum/VisaForum-Prefix.pch";
+				INFOPLIST_FILE = "VisaForumTests/VisaForumTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C39C0D7197DDE8E006BA176 /* Build configuration list for PBXProject "VisaForum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C39C106197DDE8E006BA176 /* Debug */,
+				5C39C107197DDE8E006BA176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C39C108197DDE8E006BA176 /* Build configuration list for PBXNativeTarget "VisaForum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C39C109197DDE8E006BA176 /* Debug */,
+				5C39C10A197DDE8E006BA176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5C39C10B197DDE8E006BA176 /* Build configuration list for PBXNativeTarget "VisaForumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C39C10C197DDE8E006BA176 /* Debug */,
+				5C39C10D197DDE8E006BA176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C39C0D4197DDE8E006BA176 /* Project object */;
+}
