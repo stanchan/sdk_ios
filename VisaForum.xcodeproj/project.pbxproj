@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0F5C9D198851F900A6C445 /* envelope4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0F5C98198851F900A6C445 /* envelope4.png */; };
+		5C0F5C9E198851F900A6C445 /* heart34.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0F5C99198851F900A6C445 /* heart34.png */; };
+		5C0F5C9F198851F900A6C445 /* heart280.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0F5C9A198851F900A6C445 /* heart280.png */; };
+		5C0F5CA0198851F900A6C445 /* password4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0F5C9B198851F900A6C445 /* password4.png */; };
+		5C0F5CA1198851F900A6C445 /* password13.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0F5C9C198851F900A6C445 /* password13.png */; };
+		5C0FB58C1986F42E001AD85E /* ForumTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C0FB58B1986F42E001AD85E /* ForumTableCell.xib */; };
+		5C0FB58F1986F666001AD85E /* ForumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0FB58E1986F666001AD85E /* ForumTableViewCell.m */; };
+		5C1C08FB1986B97A00E3A2F5 /* hk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C1C08FA1986B97A00E3A2F5 /* hk.jpg */; };
+		5C1C08FF1986C82200E3A2F5 /* CustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1C08FE1986C82100E3A2F5 /* CustomTableCell.xib */; };
+		5C1C09021986CCB100E3A2F5 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1C09011986CCB100E3A2F5 /* CustomTableViewCell.m */; };
 		5C39C0E0197DDE8E006BA176 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0DF197DDE8E006BA176 /* Foundation.framework */; };
 		5C39C0E2197DDE8E006BA176 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0E1197DDE8E006BA176 /* CoreGraphics.framework */; };
 		5C39C0E4197DDE8E006BA176 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0E3197DDE8E006BA176 /* UIKit.framework */; };
@@ -19,6 +29,31 @@
 		5C39C0FB197DDE8E006BA176 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C0E3197DDE8E006BA176 /* UIKit.framework */; };
 		5C39C103197DDE8E006BA176 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C39C101197DDE8E006BA176 /* InfoPlist.strings */; };
 		5C39C105197DDE8E006BA176 /* VisaForumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39C104197DDE8E006BA176 /* VisaForumTests.m */; };
+		5C39C10F197DDEAD006BA176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C39C10E197DDEAD006BA176 /* Main.storyboard */; };
+		5C39C113197DE04D006BA176 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39C112197DE04D006BA176 /* LoginViewController.m */; };
+		5C39C158197EE3FD006BA176 /* PostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39C157197EE3FD006BA176 /* PostsTableViewController.m */; };
+		5C39C15C197EE7C9006BA176 /* Posts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39C15B197EE7C9006BA176 /* Posts.m */; };
+		5C39C15F197EE7D7006BA176 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39C15E197EE7D7006BA176 /* Comment.m */; };
+		5C39C161197EEB10006BA176 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C39C160197EEB10006BA176 /* QuartzCore.framework */; };
+		5C55E8D71989A35A00BAEB19 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C55E8D61989A35A00BAEB19 /* UserViewController.m */; };
+		5C55E8D91989BB2500BAEB19 /* vbm_wht01.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C55E8D81989BB2500BAEB19 /* vbm_wht01.png */; };
+		5C55E8DB1989BBA000BAEB19 /* I.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C55E8DA1989BBA000BAEB19 /* I.png */; };
+		5C55E8E21989BBB100BAEB19 /* A.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C55E8DC1989BBB100BAEB19 /* A.png */; };
+		5C55E8E31989BBB100BAEB19 /* S.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C55E8DD1989BBB100BAEB19 /* S.png */; };
+		5C55E8E41989BBB100BAEB19 /* V.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C55E8DE1989BBB100BAEB19 /* V.png */; };
+		5C55E8E51989BBB100BAEB19 /* Visa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C55E8DF1989BBB100BAEB19 /* Visa@2x.png */; };
+		5C55E8E61989BBB100BAEB19 /* Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C55E8E01989BBB100BAEB19 /* Visa.png */; };
+		5C55E8E71989BBB100BAEB19 /* visa_2014_logo_detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C55E8E11989BBB100BAEB19 /* visa_2014_logo_detail.png */; };
+		5CF7C46C198027D30038E727 /* AddPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7C46B198027D30038E727 /* AddPostViewController.m */; };
+		5CFA1C9E1981C09A00987F7D /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA1C9D1981C09A00987F7D /* ForumViewController.m */; };
+		5CFC9D99198AE6BF00C683DA /* poll1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC9D97198AE6BF00C683DA /* poll1.png */; };
+		5CFC9D9A198AE6BF00C683DA /* post.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC9D98198AE6BF00C683DA /* post.png */; };
+		5CFD1B72198955860088F418 /* vintage_ff_f_HR_72dpi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CFD1B6E198955860088F418 /* vintage_ff_f_HR_72dpi.jpg */; };
+		5CFD1B73198955860088F418 /* vintage_ff_f_HR_120dpi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CFD1B6F198955860088F418 /* vintage_ff_f_HR_120dpi.jpg */; };
+		5CFD1B74198955860088F418 /* YI1W0250_HR_72dpi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CFD1B70198955860088F418 /* YI1W0250_HR_72dpi.jpg */; };
+		5CFD1B75198955860088F418 /* YI1W0250_HR_120dpi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CFD1B71198955860088F418 /* YI1W0250_HR_120dpi.jpg */; };
+		5CFD1B781989583B0088F418 /* email20.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CFD1B761989583B0088F418 /* email20.png */; };
+		5CFD1B791989583B0088F418 /* lock26.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CFD1B771989583B0088F418 /* lock26.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +67,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0F5C98198851F900A6C445 /* envelope4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope4.png; path = "../../../../Pictures/app images/envelope4.png"; sourceTree = "<group>"; };
+		5C0F5C99198851F900A6C445 /* heart34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart34.png; path = "../../../../Pictures/app images/heart34.png"; sourceTree = "<group>"; };
+		5C0F5C9A198851F900A6C445 /* heart280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart280.png; path = "../../../../Pictures/app images/heart280.png"; sourceTree = "<group>"; };
+		5C0F5C9B198851F900A6C445 /* password4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = password4.png; path = "../../../../Pictures/app images/password4.png"; sourceTree = "<group>"; };
+		5C0F5C9C198851F900A6C445 /* password13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = password13.png; path = "../../../../Pictures/app images/password13.png"; sourceTree = "<group>"; };
+		5C0FB58B1986F42E001AD85E /* ForumTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ForumTableCell.xib; path = ../ForumTableCell.xib; sourceTree = "<group>"; };
+		5C0FB58D1986F666001AD85E /* ForumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumTableViewCell.h; sourceTree = "<group>"; };
+		5C0FB58E1986F666001AD85E /* ForumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumTableViewCell.m; sourceTree = "<group>"; };
+		5C1C08FA1986B97A00E3A2F5 /* hk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hk.jpg; path = ../../../../Pictures/hk.jpg; sourceTree = "<group>"; };
+		5C1C08FE1986C82100E3A2F5 /* CustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomTableCell.xib; path = ../CustomTableCell.xib; sourceTree = "<group>"; };
+		5C1C09001986CCB100E3A2F5 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		5C1C09011986CCB100E3A2F5 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		5C39C0DC197DDE8E006BA176 /* VisaForum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisaForum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C39C0DF197DDE8E006BA176 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C39C0E1197DDE8E006BA176 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +95,38 @@
 		5C39C100197DDE8E006BA176 /* VisaForumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisaForumTests-Info.plist"; sourceTree = "<group>"; };
 		5C39C102197DDE8E006BA176 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5C39C104197DDE8E006BA176 /* VisaForumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisaForumTests.m; sourceTree = "<group>"; };
+		5C39C10E197DDEAD006BA176 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		5C39C111197DE04D006BA176 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5C39C112197DE04D006BA176 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5C39C156197EE3FD006BA176 /* PostsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsTableViewController.h; sourceTree = "<group>"; };
+		5C39C157197EE3FD006BA176 /* PostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsTableViewController.m; sourceTree = "<group>"; };
+		5C39C15A197EE7C9006BA176 /* Posts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posts.h; sourceTree = "<group>"; };
+		5C39C15B197EE7C9006BA176 /* Posts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posts.m; sourceTree = "<group>"; };
+		5C39C15D197EE7D7006BA176 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		5C39C15E197EE7D7006BA176 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		5C39C160197EEB10006BA176 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5C55E8D51989A35A00BAEB19 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		5C55E8D61989A35A00BAEB19 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		5C55E8D81989BB2500BAEB19 /* vbm_wht01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vbm_wht01.png; path = ../../../../Pictures/visapictures/NEW_vbm/White/vbm_wht01.png; sourceTree = "<group>"; };
+		5C55E8DA1989BBA000BAEB19 /* I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = I.png; path = ../../../../Pictures/visapictures/I.png; sourceTree = "<group>"; };
+		5C55E8DC1989BBB100BAEB19 /* A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = A.png; path = ../../../../Pictures/visapictures/A.png; sourceTree = "<group>"; };
+		5C55E8DD1989BBB100BAEB19 /* S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = S.png; path = ../../../../Pictures/visapictures/S.png; sourceTree = "<group>"; };
+		5C55E8DE1989BBB100BAEB19 /* V.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = V.png; path = ../../../../Pictures/visapictures/V.png; sourceTree = "<group>"; };
+		5C55E8DF1989BBB100BAEB19 /* Visa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Visa@2x.png"; path = "../../../../Pictures/visapictures/Visa@2x.png"; sourceTree = "<group>"; };
+		5C55E8E01989BBB100BAEB19 /* Visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Visa.png; path = ../../../../Pictures/visapictures/Visa.png; sourceTree = "<group>"; };
+		5C55E8E11989BBB100BAEB19 /* visa_2014_logo_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = visa_2014_logo_detail.png; path = ../../../../Pictures/visapictures/visa_2014_logo_detail.png; sourceTree = "<group>"; };
+		5CF7C46A198027D30038E727 /* AddPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPostViewController.h; sourceTree = "<group>"; };
+		5CF7C46B198027D30038E727 /* AddPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPostViewController.m; sourceTree = "<group>"; };
+		5CFA1C9C1981C09A00987F7D /* ForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumViewController.h; sourceTree = "<group>"; };
+		5CFA1C9D1981C09A00987F7D /* ForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumViewController.m; sourceTree = "<group>"; };
+		5CFC9D97198AE6BF00C683DA /* poll1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poll1.png; path = "../../../../Pictures/app images/poll1.png"; sourceTree = "<group>"; };
+		5CFC9D98198AE6BF00C683DA /* post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = post.png; path = "../../../../Pictures/app images/post.png"; sourceTree = "<group>"; };
+		5CFD1B6E198955860088F418 /* vintage_ff_f_HR_72dpi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = vintage_ff_f_HR_72dpi.jpg; path = ../../../../Pictures/visapictures/vintage_ff_f_HR_72dpi.jpg; sourceTree = "<group>"; };
+		5CFD1B6F198955860088F418 /* vintage_ff_f_HR_120dpi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = vintage_ff_f_HR_120dpi.jpg; path = ../../../../Pictures/visapictures/vintage_ff_f_HR_120dpi.jpg; sourceTree = "<group>"; };
+		5CFD1B70198955860088F418 /* YI1W0250_HR_72dpi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = YI1W0250_HR_72dpi.jpg; path = ../../../../Pictures/visapictures/YI1W0250_HR_72dpi.jpg; sourceTree = "<group>"; };
+		5CFD1B71198955860088F418 /* YI1W0250_HR_120dpi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = YI1W0250_HR_120dpi.jpg; path = ../../../../Pictures/visapictures/YI1W0250_HR_120dpi.jpg; sourceTree = "<group>"; };
+		5CFD1B761989583B0088F418 /* email20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email20.png; path = "../../../../Pictures/app images/email20.png"; sourceTree = "<group>"; };
+		5CFD1B771989583B0088F418 /* lock26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock26.png; path = "../../../../Pictures/app images/lock26.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C39C161197EEB10006BA176 /* QuartzCore.framework in Frameworks */,
 				5C39C0E2197DDE8E006BA176 /* CoreGraphics.framework in Frameworks */,
 				5C39C0E4197DDE8E006BA176 /* UIKit.framework in Frameworks */,
 				5C39C0E0197DDE8E006BA176 /* Foundation.framework in Frameworks */,
@@ -96,6 +176,7 @@
 		5C39C0DE197DDE8E006BA176 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C39C160197EEB10006BA176 /* QuartzCore.framework */,
 				5C39C0DF197DDE8E006BA176 /* Foundation.framework */,
 				5C39C0E1197DDE8E006BA176 /* CoreGraphics.framework */,
 				5C39C0E3197DDE8E006BA176 /* UIKit.framework */,
@@ -109,7 +190,13 @@
 			children = (
 				5C39C0EE197DDE8E006BA176 /* HKVAppDelegate.h */,
 				5C39C0EF197DDE8E006BA176 /* HKVAppDelegate.m */,
+				5C39C10E197DDEAD006BA176 /* Main.storyboard */,
+				5C39C159197EE780006BA176 /* Models */,
+				5C39C110197DE032006BA176 /* View Controllers */,
 				5C39C0F1197DDE8E006BA176 /* Images.xcassets */,
+				5C1C08FE1986C82100E3A2F5 /* CustomTableCell.xib */,
+				5C0FB58B1986F42E001AD85E /* ForumTableCell.xib */,
+				5CF7C47319804F300038E727 /* Images */,
 				5C39C0E6197DDE8E006BA176 /* Supporting Files */,
 			);
 			path = VisaForum;
@@ -142,6 +229,67 @@
 				5C39C101197DDE8E006BA176 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C39C110197DE032006BA176 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C39C111197DE04D006BA176 /* LoginViewController.h */,
+				5C39C112197DE04D006BA176 /* LoginViewController.m */,
+				5C39C156197EE3FD006BA176 /* PostsTableViewController.h */,
+				5C39C157197EE3FD006BA176 /* PostsTableViewController.m */,
+				5CF7C46A198027D30038E727 /* AddPostViewController.h */,
+				5CF7C46B198027D30038E727 /* AddPostViewController.m */,
+				5CFA1C9C1981C09A00987F7D /* ForumViewController.h */,
+				5CFA1C9D1981C09A00987F7D /* ForumViewController.m */,
+				5C1C09001986CCB100E3A2F5 /* CustomTableViewCell.h */,
+				5C1C09011986CCB100E3A2F5 /* CustomTableViewCell.m */,
+				5C0FB58D1986F666001AD85E /* ForumTableViewCell.h */,
+				5C0FB58E1986F666001AD85E /* ForumTableViewCell.m */,
+				5C55E8D51989A35A00BAEB19 /* UserViewController.h */,
+				5C55E8D61989A35A00BAEB19 /* UserViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5C39C159197EE780006BA176 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C39C15A197EE7C9006BA176 /* Posts.h */,
+				5C39C15B197EE7C9006BA176 /* Posts.m */,
+				5C39C15D197EE7D7006BA176 /* Comment.h */,
+				5C39C15E197EE7D7006BA176 /* Comment.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5CF7C47319804F300038E727 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5CFC9D97198AE6BF00C683DA /* poll1.png */,
+				5CFC9D98198AE6BF00C683DA /* post.png */,
+				5C55E8DC1989BBB100BAEB19 /* A.png */,
+				5C55E8DD1989BBB100BAEB19 /* S.png */,
+				5C55E8DE1989BBB100BAEB19 /* V.png */,
+				5C55E8DF1989BBB100BAEB19 /* Visa@2x.png */,
+				5C55E8E01989BBB100BAEB19 /* Visa.png */,
+				5C55E8E11989BBB100BAEB19 /* visa_2014_logo_detail.png */,
+				5C55E8DA1989BBA000BAEB19 /* I.png */,
+				5C55E8D81989BB2500BAEB19 /* vbm_wht01.png */,
+				5CFD1B761989583B0088F418 /* email20.png */,
+				5CFD1B771989583B0088F418 /* lock26.png */,
+				5CFD1B6E198955860088F418 /* vintage_ff_f_HR_72dpi.jpg */,
+				5CFD1B6F198955860088F418 /* vintage_ff_f_HR_120dpi.jpg */,
+				5CFD1B70198955860088F418 /* YI1W0250_HR_72dpi.jpg */,
+				5CFD1B71198955860088F418 /* YI1W0250_HR_120dpi.jpg */,
+				5C0F5C98198851F900A6C445 /* envelope4.png */,
+				5C0F5C99198851F900A6C445 /* heart34.png */,
+				5C0F5C9A198851F900A6C445 /* heart280.png */,
+				5C0F5C9B198851F900A6C445 /* password4.png */,
+				5C0F5C9C198851F900A6C445 /* password13.png */,
+				5C1C08FA1986B97A00E3A2F5 /* hk.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +368,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CFC9D99198AE6BF00C683DA /* poll1.png in Resources */,
+				5C55E8E61989BBB100BAEB19 /* Visa.png in Resources */,
+				5CFC9D9A198AE6BF00C683DA /* post.png in Resources */,
+				5C55E8E41989BBB100BAEB19 /* V.png in Resources */,
+				5C0F5CA1198851F900A6C445 /* password13.png in Resources */,
+				5C0F5CA0198851F900A6C445 /* password4.png in Resources */,
+				5C55E8E51989BBB100BAEB19 /* Visa@2x.png in Resources */,
+				5C1C08FB1986B97A00E3A2F5 /* hk.jpg in Resources */,
+				5C55E8E31989BBB100BAEB19 /* S.png in Resources */,
+				5CFD1B74198955860088F418 /* YI1W0250_HR_72dpi.jpg in Resources */,
+				5CFD1B75198955860088F418 /* YI1W0250_HR_120dpi.jpg in Resources */,
+				5CFD1B73198955860088F418 /* vintage_ff_f_HR_120dpi.jpg in Resources */,
+				5C0F5C9E198851F900A6C445 /* heart34.png in Resources */,
+				5C55E8E71989BBB100BAEB19 /* visa_2014_logo_detail.png in Resources */,
+				5CFD1B781989583B0088F418 /* email20.png in Resources */,
+				5C0F5C9D198851F900A6C445 /* envelope4.png in Resources */,
+				5C39C10F197DDEAD006BA176 /* Main.storyboard in Resources */,
+				5C0FB58C1986F42E001AD85E /* ForumTableCell.xib in Resources */,
+				5C55E8D91989BB2500BAEB19 /* vbm_wht01.png in Resources */,
+				5C55E8DB1989BBA000BAEB19 /* I.png in Resources */,
 				5C39C0EA197DDE8E006BA176 /* InfoPlist.strings in Resources */,
 				5C39C0F2197DDE8E006BA176 /* Images.xcassets in Resources */,
+				5C55E8E21989BBB100BAEB19 /* A.png in Resources */,
+				5CFD1B72198955860088F418 /* vintage_ff_f_HR_72dpi.jpg in Resources */,
+				5C0F5C9F198851F900A6C445 /* heart280.png in Resources */,
+				5CFD1B791989583B0088F418 /* lock26.png in Resources */,
+				5C1C08FF1986C82200E3A2F5 /* CustomTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +413,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CFA1C9E1981C09A00987F7D /* ForumViewController.m in Sources */,
+				5CF7C46C198027D30038E727 /* AddPostViewController.m in Sources */,
 				5C39C0F0197DDE8E006BA176 /* HKVAppDelegate.m in Sources */,
+				5C39C15F197EE7D7006BA176 /* Comment.m in Sources */,
+				5C39C158197EE3FD006BA176 /* PostsTableViewController.m in Sources */,
+				5C1C09021986CCB100E3A2F5 /* CustomTableViewCell.m in Sources */,
 				5C39C0EC197DDE8E006BA176 /* main.m in Sources */,
+				5C55E8D71989A35A00BAEB19 /* UserViewController.m in Sources */,
+				5C0FB58F1986F666001AD85E /* ForumTableViewCell.m in Sources */,
+				5C39C113197DE04D006BA176 /* LoginViewController.m in Sources */,
+				5C39C15C197EE7C9006BA176 /* Posts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VisaForum/VisaForum-Prefix.pch";
 				INFOPLIST_FILE = "VisaForum/VisaForum-Info.plist";
@@ -371,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VisaForum/VisaForum-Prefix.pch";
 				INFOPLIST_FILE = "VisaForum/VisaForum-Info.plist";
@@ -438,6 +622,7 @@
 				5C39C10A197DDE8E006BA176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C39C10B197DDE8E006BA176 /* Build configuration list for PBXNativeTarget "VisaForumTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +631,7 @@
 				5C39C10D197DDE8E006BA176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
