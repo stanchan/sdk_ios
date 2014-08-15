@@ -34,73 +34,35 @@
     }
 }
 
-//- (id)initWithStyle:(UITableViewStyle)style
-//{
-//    self = [super initWithStyle:style];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
+- (IBAction)logoutUser:(id)sender {
+    NSLog(@"%@", self.navigationController.viewControllers);
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    posts = [[NSMutableArray alloc] init]; //allocate memory and initialize array
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    posts = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return posts.count;
 }
 
-
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomTableCell" forIndexPath:indexPath];
-//    
-//    //might not be necessary
-//    if (cell == nil)
-//    {
-//        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SimpleTableCell" owner:self options:nil];
-//        cell = [nib objectAtIndex:0];
-//    }
-//    
-//    //Gets current post for index path
-//    Posts *p = [posts objectAtIndex:indexPath.row];
-//    
-//    //Populates regular table cell
-//    //cell.textLabel.text = p.title;
-//    //cell.detailTextLabel.text = p.details;
-//    //cell.imageView.image = [UIImage imageNamed:@"hk.jpg"];
-//    
-//    //Populates custom table cell
-//    cell.nameLabel.text = p.title;
-//    cell.descriptionLabel.text = p.details;
-//    cell.thumbnailImageView.image = [UIImage imageNamed:@"hk.jpg"];
-//    
-//    return cell;
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -129,8 +91,8 @@
     [formatter setDateFormat:@"MM/dd/yyyy"];
     
     NSString *resultString = [formatter stringFromDate:[NSDate date]];
-    //[formatter release];
-    cell.timeLabel.text = resultString; //[p.timestamp description];
+
+    cell.timeLabel.text = resultString;
     
     return cell;
 }
@@ -143,53 +105,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //sets the selected post and segues to detail view controller
     NSLog(@"%@", indexPath);
     selectedPost = [posts objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"toForum" sender:self];
-//    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-//    Posts *tappedItem = [posts objectAtIndex:indexPath.row];
-//    tappedItem.completed = !tappedItem.completed;
-//    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Navigation
@@ -217,30 +136,34 @@
     AddPostViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"addPostViewControllerID" ];
     self.navigationController.viewControllers = [[NSArray alloc] initWithObjects:vc, nil];
     [self.navigationController pushViewController:vc animated:YES];
+    
+    //added
+//    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Add New Post", @"Add New Poll", nil];
+//    [actionSheet showInView:self.view];
 }
-//- (IBAction)unwindToList:(id)sender {
+
+//added
+//-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+//    UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+//    picker.delegate = self;
+//    if (buttonIndex == 0) {
+//        AddPostViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"addPostViewControllerID" ];
+//        self.navigationController.viewControllers = [[NSArray alloc] initWithObjects:vc, nil];
+//        [self.navigationController pushViewController:vc animated:YES];
+//    } else if (buttonIndex == 1) {
+//        //take picture from camera (doesn't work on simulator)
+//        //picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//        //[self presentModalViewController:picker animated:YES];
+//    }
 //}
 
 //Delegate method for the add post, This allows for me to easily return the data created on the add post page without having to pass a reference to my posts array
 //This helps a lot when you want to encapsulate or change the way data moves around. If i were to delete the posts array, I dont have to change it in 400 places
 //This function takes the post and adds it to the posts array. It then reloads the tableview so the post is reflected in the view
 -(void)addPostDidReturnWithPost:(Posts *)post {
-    if(post == NULL)
-        return;
-    
+    if(post == NULL) return;
     [posts addObject:post];
-    NSLog(@"%@", post); //just prints (not really necessary besides debugging)
     [self.tableView reloadData];
 }
 
-//- (IBAction)logout:(id)sender {
-////    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Login"
-////                                                    message:@"Username or password is too short."
-////                                                   delegate:nil
-////                                          cancelButtonTitle:@"OK"
-////                                          otherButtonTitles:nil];
-////    [alert show];
-//    [self.navigationController popToViewController:self animated:YES];
-//    //[self dismissViewControllerAnimated:YES completion:nil];
-//}
 @end

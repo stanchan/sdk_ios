@@ -8,8 +8,13 @@
 
 #import "LoginViewController.h"
 #import "PostsTableViewController.h"
+#import "User.h"
+#import "RegisterViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () {
+    NSMutableArray *users;
+    //RegisterViewController *regVC;
+}
 
 @end
 
@@ -18,23 +23,21 @@
 @synthesize usernameTextField = _usernameTextField;
 @synthesize passwordTextField = _passwordTextField;
 
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    users = [[NSMutableArray alloc] init];
+    
     self.loginButton.layer.cornerRadius = 4.0;
     self.loginButton.layer.borderWidth = 1.0;
-    //self.loginButton.layer.borderColor = [UIColor colorWithRed:.5 green:.8 blue: 1 alpha:.7].CGColor;
     self.loginButton.layer.borderColor = [UIColor colorWithRed:255 green:255 blue:255 alpha:.7].CGColor;
+    
+    self.registerButton.layer.cornerRadius = 4.0;
+    self.registerButton.layer.borderWidth = 1.0;
+    self.registerButton.layer.borderColor = [UIColor colorWithRed:255 green:255 blue:255 alpha:.7].CGColor;
+    
     _usernameTextField.delegate = self;
     _passwordTextField.delegate = self;
 }
@@ -58,6 +61,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)registrationViewDidReturn:(NSDictionary *)results {
+    NSLog(@"HEY IT WORKS");
+    [self performSegueWithIdentifier:@"toPosts" sender:self];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -69,21 +77,10 @@
         PostsTableViewController *postVC = [segue destinationViewController];
         postVC.username = self.usernameTextField.text;
     }
-//    NSLog(@"Source Controller = %@", [segue sourceViewController]);
-//    NSLog(@"Destination Controller = %@", [segue destinationViewController]);
-//    NSLog(@"Segue Identifier = %@", [segue identifier]);
-//    
-//    if ([segue.identifier isEqualToString:@"toPosts"])
-//    {
-//        NSLog(@"coming here");
-//        
-//        PostsTableViewController *loginViewController = (PostsTableViewController *)segue.destinationViewController;
-//        
-//        //SecondViewController *navigationController = [[UINavigationController alloc]init];
-//        
-//        [self presentViewController:loginViewController animated:YES completion:nil];
-//        
-//        
+    
+//    if([segue.identifier isEqualToString:@"toRegister"]) {
+//        regVC = [segue destinationViewController];
+//        regVC.delegate = self;
 //    }
 }
 
@@ -108,15 +105,47 @@
                                               otherButtonTitles:nil];
         [alert show];
     } else {
+        NSLog(@"%d", [users count]);
         PostsTableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"postTableViewControllerID" ];
-        self.navigationController.viewControllers = [[NSArray alloc] initWithObjects:vc, nil];
+        //self.navigationController.viewControllers = [[NSArray alloc] initWithObjects:vc, nil];
         [self.navigationController pushViewController:vc animated:YES];
-    }
+        
+//        for (int i = 0; i < [users count]; i++) {
+//            NSLog(@"GOT HERE");
+//            User *currentUser = [users objectAtIndex:i];
+//            if ([currentUser.username isEqualToString:self.usernameTextField.text] && [currentUser.password isEqualToString:self.passwordTextField.text]) {
+//                PostsTableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"postTableViewControllerID" ];
+//                self.navigationController.viewControllers = [[NSArray alloc] initWithObjects:vc, nil];
+//                [self.navigationController pushViewController:vc animated:YES];
+//            } else {
+//                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Login"
+//                                                                message:@"Not a valid visa email."
+//                                                               delegate:nil
+//                                                      cancelButtonTitle:@"OK"
+//                                                      otherButtonTitles:nil];
+//                [alert show];
+//            }
+//        }
+      }
 }
 
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)segue
 {
-    
+    //users = [[NSMutableArray alloc] init];
+    RegisterViewController *source = [segue sourceViewController];
+    User *item = source.user;
+    if (item != nil) {
+        [users addObject:item];
+    }
 }
 
+- (IBAction)register:(id)sender {
+    RegisterViewController *vc =[self.storyboard instantiateViewControllerWithIdentifier:@"registerViewControllerID" ];
+    //[self.storyboard instantiateViewControllerWithIdentifier:@"registerViewControllerID" ];
+    self.navigationController.viewControllers = [[NSArray alloc] initWithObjects:vc, nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)registerNewAccount:(id)sender {
+    [self performSegueWithIdentifier:@"toRegister" sender:self];
+}
 @end

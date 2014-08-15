@@ -11,11 +11,12 @@
 #import "CustomTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface PostsTableViewController : UITableViewController
+@interface PostsTableViewController : UITableViewController <UIActionSheetDelegate>
 - (IBAction)addPost:(id)sender;
 @property (nonatomic, strong) NSString *username;
-//- (IBAction)logout:(id)sender;
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+
+- (IBAction)logoutUser:(id)sender;
 
 @end

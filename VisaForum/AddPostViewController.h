@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Posts.h"
 
-@interface AddPostViewController : UIViewController
+@interface AddPostViewController : UIViewController <UITextFieldDelegate>
 
 @property Posts *post;
 @property (weak, nonatomic) IBOutlet UIView *box;

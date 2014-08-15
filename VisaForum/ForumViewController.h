@@ -11,7 +11,7 @@
 #import "Comment.h"
 #import "ForumTableViewCell.h"
 
-@interface ForumViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
+@interface ForumViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *forumTextView;
 @property (weak, nonatomic) IBOutlet UITableView *commentTableView;
 @property Posts *post;

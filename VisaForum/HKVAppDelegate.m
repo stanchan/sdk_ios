@@ -7,6 +7,7 @@
 //
 
 #import "HKVAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation HKVAppDelegate
 
@@ -16,6 +17,8 @@
     // Override point for customization after application launch.
     //self.window.backgroundColor = [UIColor whiteColor];
     //[self.window makeKeyAndVisible];
+    [Parse setApplicationId:@"H3mu4BaDRhzRt845hMveBomdTkh2KvTv1IgWjgsF"
+                  clientKey:@"AeB7oKy1BPsGCrBJAPVHpvvmWKJKdY0BOfZQh5Ps"];
     
     return YES;
 }

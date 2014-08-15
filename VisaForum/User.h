@@ -10,4 +10,9 @@
 
 @interface User : NSObject
 
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, weak) UIImage *userImage;
+
 @end

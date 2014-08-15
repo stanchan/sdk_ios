@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RegisterViewController.h"
 
-@interface LoginViewController : UIViewController <UITextViewDelegate>
+@interface LoginViewController : UIViewController <UITextViewDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 - (IBAction)login:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
+
+- (IBAction)register:(id)sender;
+
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)segue;
+
+- (IBAction)registerNewAccount:(id)sender;
 
 @end

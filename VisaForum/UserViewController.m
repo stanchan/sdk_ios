@@ -32,7 +32,8 @@
     
     self.userImage.layer.cornerRadius = self.userImage.frame.size.height /2;
     self.userImage.layer.masksToBounds = YES;
-    self.userImage.layer.borderWidth = 0;
+    self.userImage.layer.borderWidth = 3;
+    self.userImage.layer.borderColor = [UIColor orangeColor].CGColor;
     self.userImage.image = [UIImage imageNamed:@"hk.jpg"];
 }
 

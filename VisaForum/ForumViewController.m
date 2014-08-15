@@ -48,7 +48,8 @@
     //image editing/rounding
     self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height /2;
     self.profileImage.layer.masksToBounds = YES;
-    self.profileImage.layer.borderWidth = 0;
+    self.profileImage.layer.borderWidth = 2;
+    self.profileImage.layer.borderColor = [UIColor orangeColor].CGColor;
     self.profileImage.image = [UIImage imageNamed:@"hk.jpg"];
     
     //Don't worry about these, theyre so the toolbar rises when the keyboard becomes active.

@@ -18,26 +18,17 @@
 
 @implementation AddPostViewController
 {
-    //arrays for pictures of users
     NSArray *tableData;
     NSArray *thumbnails;
 }
 
 @synthesize postTitle = _postTitle;
 @synthesize postSubtitle = _postSubtitle;
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     _postTitle.delegate = self;
     _postSubtitle.delegate = self;
     self.box.layer.cornerRadius = 5;
