@@ -19,6 +19,7 @@
     //[self.window makeKeyAndVisible];
     [Parse setApplicationId:@"H3mu4BaDRhzRt845hMveBomdTkh2KvTv1IgWjgsF"
                   clientKey:@"AeB7oKy1BPsGCrBJAPVHpvvmWKJKdY0BOfZQh5Ps"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     return YES;
 }

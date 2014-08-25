@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Posts.h"
+#import "Parse/Parse.h"
 
 @interface AddPostViewController : UIViewController <UITextFieldDelegate>
 

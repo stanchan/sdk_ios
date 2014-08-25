@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
 @property (weak, nonatomic) IBOutlet UITextView *userName;
 @property (weak, nonatomic) IBOutlet UITextView *userDescription;
+@property PFObject *postObj;
 
 @end

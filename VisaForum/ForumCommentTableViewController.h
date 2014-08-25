@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ForumViewController.h"
+#import "ForumTableViewCell.h"
+#import <QuartzCore/QuartzCore.h>
+#import <Parse/Parse.h>
 
-@interface ForumCommentTableViewController : UITableViewController
+@interface ForumCommentTableViewController : PFQueryTableViewController
 
 @end

@@ -17,12 +17,21 @@
     NSString *titleForPost;
     NSString *detailForPost;
     NSMutableArray *posts;
-    
+    //NSNumber *counter;
     Posts *selectedPost;
+    PFObject *postObject;
+    BOOL *hasLiked;
 }
 @end
 
 @implementation PostsTableViewController
+
+@synthesize userImage = _userImage;
+@synthesize postDetailLabel = _postDetailLabel;
+@synthesize likeButtonOutlet = _likeButtonOutlet;
+@synthesize postTitleLabel = _postTitleLabel;
+@synthesize numberOfLikes = _numberOfLikes;
+@synthesize postTableViewCell = _postTableViewCell;
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
@@ -35,16 +44,17 @@
 }
 
 - (IBAction)logoutUser:(id)sender {
-    NSLog(@"%@", self.navigationController.viewControllers);
+    //NSLog(@"%@", self.navigationController.viewControllers);
+    [PFUser logOut];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    posts = [[NSMutableArray alloc] init];
-}
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//    posts = [[NSMutableArray alloc] init];
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -58,41 +68,196 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    return posts.count;
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    static NSString *simpleTableIdentifier = @"CustomTableCell";
+//    
+//    CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+//    if (cell == nil)
+//    {
+//        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomTableCell" owner:self options:nil];
+//        cell = [nib objectAtIndex:0];
+//    }
+//    
+//    //Gets current post for index path
+//    Posts *p = [posts objectAtIndex:indexPath.row];
+//    
+//    cell.nameLabel.text = p.title;
+//    cell.descriptionLabel.text = p.details;
+//    
+//    //Image editing/rounding
+//    cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.height /2;
+//    cell.thumbnailImageView.layer.masksToBounds = YES;
+//    cell.thumbnailImageView.layer.borderWidth = 0;
+//    cell.thumbnailImageView.image = [UIImage imageNamed:@"hk.jpg"];
+//    
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"MM/dd/yyyy"];
+//    
+//    NSString *resultString = [formatter stringFromDate:[NSDate date]];
+//
+//    cell.timeLabel.text = resultString;
+//    
+//    return cell;
+//}
+
+- (id)initWithCoder:(NSCoder *)aCoder
 {
-    return posts.count;
+    self = [super initWithCoder:aCoder];
+    if (self) {
+        // The className to query on
+        self.parseClassName = @"Posts";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"username";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = NO;
+    }
+    return self;
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (PFQuery *)queryForTable
 {
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    
+    return query;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+{
+    
+    //static NSString *simpleTableIdentifier = @"PostsCell";
+    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+//    if (cell == nil) {
+//        cell = [tableView reuseIdentifier:simpleTableIdentifier];
+//    }
+//    
+//    UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
+//    UILabel *titleLabel = (UILabel *)[cell viewWithTag:101];
+//    UILabel *detailLabel = (UILabel *)[cell viewWithTag:102];
+//    UILabel *numOfLikesLabel = (UILabel *)[cell viewWithTag:103];
+//    UIButton *likeButton = (UIButton *)[cell viewWithTag:104];
+    
+//    static NSString *simpleTableIdentifier = @"CustomTableCell";
+//    
+//    CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+//    if (cell == nil)
+//    {
+//        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomTableCell" owner:self options:nil];
+//        cell = [nib objectAtIndex:0];
+//    }
+//    
+//    //UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+//    cell.nameLabel.text = [object objectForKey:@"title"];
+//    cell.descriptionLabel.text = [object objectForKey:@"details"];
+//    cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.height /2;
+//    cell.thumbnailImageView.layer.masksToBounds = YES;
+//    cell.thumbnailImageView.layer.borderWidth = 0;
+//    
+////    PFUser *user = [PFUser currentUser];
+////    NSString *userName = [user objectForKey:@"username"];
+////    NSArray *likers = [postObject objectForKey:@"likers"];
+////    if (![likers containsObject:userName]) { //not liked
+////        [_likeButtonOutlet setImage:[UIImage imageNamed:@"heart34.png"] forState:UIControlStateNormal];
+////    } else { //liked
+////        [_likeButtonOutlet setImage:[UIImage imageNamed:@"heart280.png"] forState:UIControlStateNormal];
+////    }
+//
+//    PFFile *userImageFile = object[@"imageFile"];
+//    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+//        if (!error) {
+//            cell.thumbnailImageView.image = [UIImage imageWithData:imageData];
+//        }
+//    }];
+    
+    //UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
+    //cell.timeLabel.text = [object objectForKey:@"timestamp"];
+//    NSDateFormatter *formatter = [object objectForKey:@"timestamp"];
+//    [formatter setDateFormat:@"MM/dd/yyyy"];
+//    NSString *resultString = [formatter stringFromDate:[NSDate date]];
+//    cell.timeLabel.text = resultString;
+    
     static NSString *simpleTableIdentifier = @"CustomTableCell";
     
-    CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    if (cell == nil)
-    {
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomTableCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     
-    //Gets current post for index path
-    Posts *p = [posts objectAtIndex:indexPath.row];
+    // Configure the cell
+    //    PFFile *thumbnail = [object objectForKey:@"picture"];
+    //    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+    //    thumbnailImageView.image = [UIImage imageNamed:@"male18.jpg"];
+    //    thumbnailImageView.file = thumbnail; //not sure how this will happen
+    //    [thumbnailImageView loadInBackground];
     
-    cell.nameLabel.text = p.title;
-    cell.descriptionLabel.text = p.details;
-    
-    //Image editing/rounding
+    //UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+    cell.nameLabel.text = [object objectForKey:@"title"];
+    cell.descriptionLabel.text = [object objectForKey:@"details"];
     cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.height /2;
     cell.thumbnailImageView.layer.masksToBounds = YES;
     cell.thumbnailImageView.layer.borderWidth = 0;
-    cell.thumbnailImageView.image = [UIImage imageNamed:@"hk.jpg"];
+    cell.numberOfLikesLabel.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"likes"]];
+    cell.timeLabel.text = [object objectForKey:@"timeStamp"];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSMutableArray *likers = [postObject objectForKey:@"likers"];
+    PFUser *user = [PFUser currentUser];
+    for (PFUser *u in likers) {
+        [u fetchIfNeeded];
+        if ([user objectForKey:@"id"] == [u objectForKey:@"id"]) {
+            NSLog(@"user is there");
+            [cell.likeButton setImage:[UIImage imageNamed:@"heart280.png"] forState:UIControlStateNormal];
+            break;
+        } else {
+            NSLog(@"user is NOT there");
+            [cell.likeButton setImage:[UIImage imageNamed:@"heart34.png"] forState:UIControlStateNormal];
+        }
+    }
     
-    NSString *resultString = [formatter stringFromDate:[NSDate date]];
-
-    cell.timeLabel.text = resultString;
+    PFFile *userImageFile = object[@"imageFile"];
+    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            cell.thumbnailImageView.image = [UIImage imageWithData:imageData];
+        }
+    }];
+    
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//    formatter = [object objectForKey:@"timestamp"];
+//    [formatter setDateFormat:@"MM/dd/yyyy"];
+//    NSDate *d = [formatter dateFromString:<#(NSString *)#>]
+//    NSString *resultString = [formatter stringFromDate:[NSDate date]];
+//    cell.timeLabel.text = resultString;
+//    NSLog(@"%@",resultString);
+    
+//    NSString *datestr = @"2013-08-06T03:51:54+00:00";
+//    NSDateFormatter *dformat = [[NSDateFormatter alloc]init];
+//    
+//    [dformat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssz"];
+//    
+//    NSDate *date = [dformat dateFromString:datestr];
+    
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"MM/dd/yyyy"];
+    
+    //Optionally for time zone converstions
+    //[formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+//    NSDate *myNSDateInstance = [postObject objectForKey:@"createdAt"];
+//    NSLog(@"Todays date is %@",[formatter stringFromDate:myNSDateInstance]);
+//    NSString *stringFromDate = [formatter stringFromDate:myNSDateInstance];
+//    cell.timeLabel.text = stringFromDate;
+//    NSLog(@"%@", stringFromDate);
     
     return cell;
 }
@@ -106,7 +271,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%@", indexPath);
-    selectedPost = [posts objectAtIndex:indexPath.row];
+    //selectedPost = [posts objectAtIndex:indexPath.row];
+    postObject = [self.objects objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"toForum" sender:self];
 }
 
@@ -121,7 +287,8 @@
     if([segue.identifier isEqualToString:@"toForum"]) {
         //sets correct post for the detail post to load
         ForumViewController *forumVC = [segue destinationViewController];
-        forumVC.post = selectedPost;
+        //forumVC.post = selectedPost;
+        forumVC.postObj = postObject;
     }
     else {
         //if creating new post, get a reference to the view controller thats about to be loaded and prepare it
@@ -166,4 +333,46 @@
     [self.tableView reloadData];
 }
 
+- (IBAction)like:(id)sender {
+//    if (sender != _likeButtonOutlet) return;
+//    
+//    PFUser *user = [PFUser currentUser];
+//    NSString *userName = [user objectForKey:@"username"];
+    
+//    PFQuery *query = [PFQuery queryWithClassName:@"Posts"];
+//    [query whereKey:@"objectID" equalTo:[postObject objectForKey:@"objectID"]];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+//        for (int i = 0; i < objects.count; i++) {
+//            PFObject *event = [objects objectAtIndex:i];    // note using 'objects', not 'eventObjects'
+//            [event removeObject:userName forKey:@"username"];
+//        }
+//        [PFObject saveAll:objects];
+//    }];
+    
+    
+//    NSArray *likers = [postObject objectForKey:@"likers"]; //make this emails
+//    if (![likers containsObject:userName]) { //not liked
+//        [_likeButtonOutlet setImage:[UIImage imageNamed:@"heart280.png"] forState:UIControlStateNormal];
+//        [postObject addObject:userName forKey:@"likers"];
+//        
+//    } else { //liked
+//        [_likeButtonOutlet setImage:[UIImage imageNamed:@"heart34.png"] forState:UIControlStateNormal];
+//        [postObject removeObject:userName forKey:@"likers"];
+//    }
+    
+//    NSNumber *counter = [postObject objectForKey:@"likes"];
+//    int value = [counter intValue];
+//    if (sender != _likeButtonOutlet) return;
+//    if (counter == 0) {
+//        [_numberOfLikes setText:[NSString stringWithFormat:@"%@", [NSNumber numberWithInt:value + 1]]];
+//        //NSInteger *likes = [currentUser objectForKey:@"fullName"];
+//        //[_likeButton setTitle:@"Unlike" forState:UIControlStateNormal];
+//        [_likeButtonOutlet setImage:[UIImage imageNamed:@"heart280.png"] forState:UIControlStateNormal];
+//    } else {
+//        [_numberOfLikes setText:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:value - 1]]];
+//        //[_likeButton setTitle:@"Like" forState:UIControlStateNormal];
+//        [_likeButtonOutlet setImage:[UIImage imageNamed:@"heart34.png"] forState:UIControlStateNormal];
+//    }
+
+}
 @end

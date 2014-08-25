@@ -10,6 +10,7 @@
 #import "Posts.h"
 #import "Comment.h"
 #import "ForumTableViewCell.h"
+#import "Parse/Parse.h"
 
 @interface ForumViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *forumTextView;
@@ -23,5 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UITextView *profileName;
 @property (weak, nonatomic) IBOutlet UITextView *dateOfPost;
+@property PFObject *postObj;
 
 @end

@@ -61,10 +61,10 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)registrationViewDidReturn:(NSDictionary *)results {
-    NSLog(@"HEY IT WORKS");
-    [self performSegueWithIdentifier:@"toPosts" sender:self];
-}
+//-(void)registrationViewDidReturn:(NSDictionary *)results {
+//    NSLog(@"HEY IT WORKS");
+//    [self performSegueWithIdentifier:@"toPosts" sender:self];
+//}
 
 #pragma mark - Navigation
 
@@ -86,47 +86,46 @@
 
 
 - (IBAction)login:(id)sender {
-    int beginningLength = self.usernameTextField.text.length - 9;
-    int endLength = 9;
-    NSString *visa = @"@visa.com";
-    if(self.usernameTextField.text.length < 9 || self.passwordTextField.text.length == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Login"
-                                                        message:@"Username or password is too short."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];   
-    } else if (![[self.usernameTextField.text substringWithRange:NSMakeRange(beginningLength, endLength)] isEqualToString:visa]) {
-        NSLog(@"%@", [self.usernameTextField.text substringWithRange:NSMakeRange(beginningLength, endLength)]);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Login"
-                                                        message:@"Not a valid visa email."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-    } else {
-        NSLog(@"%d", [users count]);
-        PostsTableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"postTableViewControllerID" ];
-        //self.navigationController.viewControllers = [[NSArray alloc] initWithObjects:vc, nil];
-        [self.navigationController pushViewController:vc animated:YES];
-        
-//        for (int i = 0; i < [users count]; i++) {
-//            NSLog(@"GOT HERE");
-//            User *currentUser = [users objectAtIndex:i];
-//            if ([currentUser.username isEqualToString:self.usernameTextField.text] && [currentUser.password isEqualToString:self.passwordTextField.text]) {
-//                PostsTableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"postTableViewControllerID" ];
-//                self.navigationController.viewControllers = [[NSArray alloc] initWithObjects:vc, nil];
-//                [self.navigationController pushViewController:vc animated:YES];
-//            } else {
-//                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Login"
-//                                                                message:@"Not a valid visa email."
-//                                                               delegate:nil
-//                                                      cancelButtonTitle:@"OK"
-//                                                      otherButtonTitles:nil];
-//                [alert show];
-//            }
-//        }
-      }
+//    int beginningLength = self.usernameTextField.text.length - 9;
+//    int endLength = 9;
+//    NSString *visa = @"@visa.com";
+//    if(self.usernameTextField.text.length < 9 || self.passwordTextField.text.length == 0) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Login"
+//                                                        message:@"Username or password is too short."
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//        [alert show];   
+//    } else if (![[self.usernameTextField.text substringWithRange:NSMakeRange(beginningLength, endLength)] isEqualToString:visa]) {
+//        NSLog(@"%@", [self.usernameTextField.text substringWithRange:NSMakeRange(beginningLength, endLength)]);
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Login"
+//                                                        message:@"Not a valid visa email."
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//        [alert show];
+//    } else {
+//        NSLog(@"%d", [users count]);
+//        PostsTableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"postTableViewControllerID" ];
+//        //self.navigationController.viewControllers = [[NSArray alloc] initWithObjects:vc, nil];
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }
+    
+    [PFUser logInWithUsernameInBackground:self.usernameTextField.text password:self.passwordTextField.text block:^(PFUser *user, NSError *error) {
+        NSLog(@"%@", self.usernameTextField.text);
+        NSLog(@"%@", self.passwordTextField.text);
+        if (user) {
+            //Open the wall
+            //[self performSegueWithIdentifier:@"LoginSuccesful" sender:self];
+            PostsTableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"postTableViewControllerID" ];
+            [self.navigationController pushViewController:vc animated:YES];
+        } else {
+            //Something bad has ocurred
+            NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [errorAlertView show];
+        }
+    }];
 }
 
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)segue

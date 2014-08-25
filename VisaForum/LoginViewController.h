@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RegisterViewController.h"
+#import "Parse/Parse.h"
 
 @interface LoginViewController : UIViewController <UITextViewDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;

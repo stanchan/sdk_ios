@@ -64,11 +64,29 @@
     // Pass the selected object to the new view controller.
     if (sender != self.postButton) return;
     if (self.postTitle.text.length > 0 && self.postSubtitle.text.length > 0) {
-        self.post = [[Posts alloc] init];
-        self.post.title = self.postTitle.text;
-        self.post.details = self.postSubtitle.text;
-        self.post.completed = NO;
+//        self.post = [[Posts alloc] init];
+//        self.post.title = self.postTitle.text;
+//        self.post.details = self.postSubtitle.text;
+//        self.post.completed = NO;
         //self.post.username = ;
+        
+        PFObject *post= [PFObject objectWithClassName:@"Posts"];
+        [post setObject:self.postTitle.text forKey:@"title"];
+        [post setObject:self.postSubtitle.text forKey:@"details"];
+        post[@"likes"] = @0;
+        [post setObject:[PFUser currentUser] forKey:@"user"];
+        PFUser *user = [post objectForKey:@"user"];
+        NSString *username = [user objectForKey:@"username"];
+        [post setObject:username forKey:@"username"];
+        post[@"fullName"] = [user objectForKey:@"fullName"];
+        post[@"imageFile"] = [user objectForKey:@"picture"];
+        
+        NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
+        [dateformate setDateFormat:@"MM/dd/YYYY"];
+        NSString *date_String=[dateformate stringFromDate:[NSDate date]];
+        post[@"timeStamp"] = date_String;
+        
+        [post saveInBackground];
     }
 }
 

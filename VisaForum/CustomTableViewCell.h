@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "PostsTableViewController.h"
+#import "Parse/Parse.h"
 
 @interface CustomTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+//@property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (weak, nonatomic) IBOutlet PFImageView *thumbnailImageView;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfLikesLabel;
 - (IBAction)like:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;

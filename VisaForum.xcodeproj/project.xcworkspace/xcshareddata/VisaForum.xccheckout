@@ -10,29 +10,29 @@
 	<string>VisaForum</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>75BD485C-78B2-47AE-8366-615D1E3AAB9B</key>
+		<key>B7CBAD672A13FE5A021A246A2E2B465AD45AF2D1</key>
 		<string>https://github.com/stanchan/sdk_ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>VisaForum.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>75BD485C-78B2-47AE-8366-615D1E3AAB9B</key>
+		<key>B7CBAD672A13FE5A021A246A2E2B465AD45AF2D1</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/stanchan/sdk_ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>75BD485C-78B2-47AE-8366-615D1E3AAB9B</string>
+	<string>B7CBAD672A13FE5A021A246A2E2B465AD45AF2D1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>75BD485C-78B2-47AE-8366-615D1E3AAB9B</string>
+			<string>B7CBAD672A13FE5A021A246A2E2B465AD45AF2D1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>VisaForum</string>
 		</dict>

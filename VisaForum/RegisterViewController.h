@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import <Parse/Parse.h>
 
 @protocol RegistrationDelegate <NSObject>
 -(void)registrationViewDidReturn:(NSDictionary *)results;
@@ -27,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *uploadImageButton;
 - (IBAction)registerAccount:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *registerAccountButton;
+@property (weak, nonatomic) IBOutlet UITextField *fullNameTextField;
 
 //@property id<RegistrationDelegate> delegate;
 

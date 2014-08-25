@@ -14,15 +14,71 @@
 
 @implementation ForumCommentTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    
+//    // Uncomment the following line to preserve selection between presentations.
+//    // self.clearsSelectionOnViewWillAppear = NO;
+//    
+//    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+//    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//}
+
+- (id)initWithCoder:(NSCoder *)aCoder
+{
+    self = [super initWithCoder:aCoder];
+    if (self) {
+        // The className to query on
+        self.parseClassName = @"Comments";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"username";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = NO;
+    }
+    return self;
 }
+
+- (PFQuery *)queryForTable
+{
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    
+    return query;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+{
+    static NSString *simpleTableIdentifier = @"ForumTableCell";
+    
+    ForumTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ForumTableCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    cell.commentLabel.text = [object objectForKey:@"comment"];
+    cell.commentImage.layer.cornerRadius = cell.commentImage.frame.size.height /2;
+    cell.commentImage.layer.masksToBounds = YES;
+    cell.commentImage.layer.borderWidth = 0;
+    
+    PFUser *user = [object objectForKey:@"user"];
+    [user fetchIfNeeded];
+    
+    PFFile *userImageFile = user[@"picture"];
+    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            cell.commentImage.image = [UIImage imageWithData:imageData];
+        }
+    }];
+    
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,15 +88,19 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 10;
+}
+
+//change height of table
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 65;
 }
 
 /*

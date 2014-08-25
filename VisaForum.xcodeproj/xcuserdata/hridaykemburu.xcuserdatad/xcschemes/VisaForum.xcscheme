@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,6 +17,20 @@
                BlueprintIdentifier = "5C39C0DB197DDE8E006BA176"
                BuildableName = "VisaForum.app"
                BlueprintName = "VisaForum"
+               ReferencedContainer = "container:VisaForum.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5C39C0F6197DDE8E006BA176"
+               BuildableName = "VisaForumTests.xctest"
+               BlueprintName = "VisaForumTests"
                ReferencedContainer = "container:VisaForum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

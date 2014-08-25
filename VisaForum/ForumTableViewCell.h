@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ForumViewController.h"
+#import "ForumCommentTableViewController.h"
+#import "Parse/Parse.h"
 
 @interface ForumTableViewCell : UITableViewCell
 

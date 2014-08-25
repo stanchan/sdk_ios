@@ -14,6 +14,8 @@
 
 @implementation UserViewController
 
+@synthesize postObj = _postObj;
+
 //- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 //{
 //    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,14 +29,24 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.userName.text = @"Hriday Kemburu";
-    self.userDescription.text = @"Global Tools and Auto Engineering Intern";
+    
+    PFUser *user = [_postObj objectForKey:@"user"];
+    [user fetchIfNeeded];
+    
+    self.userName.text = user[@"fullName"];
+    self.userDescription.text = user[@"position"];
     
     self.userImage.layer.cornerRadius = self.userImage.frame.size.height /2;
     self.userImage.layer.masksToBounds = YES;
     self.userImage.layer.borderWidth = 3;
     self.userImage.layer.borderColor = [UIColor orangeColor].CGColor;
-    self.userImage.image = [UIImage imageNamed:@"hk.jpg"];
+    
+    PFFile *userImageFile = user[@"picture"];
+    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            self.userImage.image = [UIImage imageWithData:imageData];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
