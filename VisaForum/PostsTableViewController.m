@@ -212,19 +212,34 @@
     cell.numberOfLikesLabel.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"likes"]];
     cell.timeLabel.text = [object objectForKey:@"timeStamp"];
     
-    NSMutableArray *likers = [postObject objectForKey:@"likers"];
-    PFUser *user = [PFUser currentUser];
-    for (PFUser *u in likers) {
-        [u fetchIfNeeded];
-        if ([user objectForKey:@"id"] == [u objectForKey:@"id"]) {
-            NSLog(@"user is there");
-            [cell.likeButton setImage:[UIImage imageNamed:@"heart280.png"] forState:UIControlStateNormal];
-            break;
-        } else {
-            NSLog(@"user is NOT there");
-            [cell.likeButton setImage:[UIImage imageNamed:@"heart34.png"] forState:UIControlStateNormal];
-        }
-    }
+//    NSMutableArray *likers = [NSMutableArray array];
+//    PFQuery *query = [PFUser query];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        NSLog(@"Query returned %lu results!", (unsigned long)[objects count]);
+//        if (!error) {
+//            likers = [NSMutableArray arrayWithArray:objects];
+//            NSLog(@"New array count: %lu", (unsigned long)[likers count]);
+//            //[self.pickerView reloadAllComponents];
+//        } else {
+//            //[self showErrorWithReason:[error userInfo][@"error"]];
+//        }
+//    }];
+    
+//    NSMutableArray *likers = [postObject objectForKey:@"likers"];
+//    PFUser *user = [PFUser currentUser];
+//    NSLog(@"Got Here");
+//    for (PFUser *u in likers) {
+//        NSLog(@"Inside For Loop");
+//        [u fetchIfNeeded];
+//        if ([user objectForKey:@"id"] == [u objectForKey:@"id"]) {
+//            NSLog(@"user is there");
+//            [cell.likeButton setImage:[UIImage imageNamed:@"heart280.png"] forState:UIControlStateNormal];
+//            break;
+//        } else {
+//            NSLog(@"user is NOT there");
+//            [cell.likeButton setImage:[UIImage imageNamed:@"heart34.png"] forState:UIControlStateNormal];
+//        }
+//    }
     
     PFFile *userImageFile = object[@"imageFile"];
     [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
@@ -232,32 +247,6 @@
             cell.thumbnailImageView.image = [UIImage imageWithData:imageData];
         }
     }];
-    
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-//    formatter = [object objectForKey:@"timestamp"];
-//    [formatter setDateFormat:@"MM/dd/yyyy"];
-//    NSDate *d = [formatter dateFromString:<#(NSString *)#>]
-//    NSString *resultString = [formatter stringFromDate:[NSDate date]];
-//    cell.timeLabel.text = resultString;
-//    NSLog(@"%@",resultString);
-    
-//    NSString *datestr = @"2013-08-06T03:51:54+00:00";
-//    NSDateFormatter *dformat = [[NSDateFormatter alloc]init];
-//    
-//    [dformat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssz"];
-//    
-//    NSDate *date = [dformat dateFromString:datestr];
-    
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"MM/dd/yyyy"];
-    
-    //Optionally for time zone converstions
-    //[formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
-//    NSDate *myNSDateInstance = [postObject objectForKey:@"createdAt"];
-//    NSLog(@"Todays date is %@",[formatter stringFromDate:myNSDateInstance]);
-//    NSString *stringFromDate = [formatter stringFromDate:myNSDateInstance];
-//    cell.timeLabel.text = stringFromDate;
-//    NSLog(@"%@", stringFromDate);
     
     return cell;
 }

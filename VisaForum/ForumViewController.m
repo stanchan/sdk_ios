@@ -231,13 +231,6 @@
         }
     }];
     
-    //cell.commentImage.image = [UIImage imageNamed:@"hk.jpg"];
-    
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"MM/dd"];
-//    NSString *resultString = [formatter stringFromDate:[NSDate date]];
-//    cell.date.text = resultString;
-    
     return cell;
 }
 
